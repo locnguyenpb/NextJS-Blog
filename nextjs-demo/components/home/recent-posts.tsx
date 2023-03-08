@@ -3,7 +3,7 @@ import { Box, Container, Stack } from '@mui/system';
 import { Typography, Link as MuiLink } from '@mui/material';
 import Link from 'next/link';
 import { PostCard } from './post-card';
-import { Post } from 'models/posts';
+import { Post } from '@/models';
 
 export function RecentPosts() {
   // call API to get post list
@@ -36,7 +36,7 @@ export function RecentPosts() {
           justifyContent={{ xs: 'center', md: 'space-between' }}
           alignItems='center'
         >
-          <Typography variant='h5'>Recent Posts</Typography>
+          <Typography variant='h5'>Recent posts</Typography>
 
           <Link passHref href='/blog' legacyBehavior>
             <MuiLink className='active' sx={{ display: { xs: 'none', md: 'inline' } }}>

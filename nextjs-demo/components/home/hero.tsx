@@ -40,7 +40,7 @@ export function HeroSection() {
               height: '240px',
             }}
           >
-            <Image className='avatar' src={avatar} layout='responsive' alt='avatar' />
+            <Image className='avatar' src={avatar} alt='avatar' />
           </Box>
         </Stack>
       </Container>
