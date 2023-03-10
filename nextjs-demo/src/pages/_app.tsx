@@ -1,4 +1,5 @@
-import '@/styles/globals.css';
+import '../styles/globals.css';
+import '../styles/prism.css';
 import axiosClient from 'api-client/axios-client';
 import { EmptyLayout } from 'components/layout';
 import { AppPropsWithLayout } from 'models/common';

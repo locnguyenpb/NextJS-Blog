@@ -10,10 +10,11 @@ const Home: NextPageWithLayout = () => {
       <SEO
         data={{
           title: 'NextJS Tutorial | Nashtech',
-          thumbnailUrl: 'https://nextjs-demo-delta-two.vercel.app/',
+          thumbnailUrl:
+            'https://images.velog.io/images/bigbrothershin/post/c375d3e6-21db-4fa6-9a2a-0c0c66819adf/nextjs%20image.jpeg',
           description:
             'Step by step tutorials to build a full CRUD website using NextJS for beginners',
-          url: 'https://images.velog.io/images/bigbrothershin/post/c375d3e6-21db-4fa6-9a2a-0c0c66819adf/nextjs%20image.jpeg',
+          url: 'https://nextjs-demo-delta-two.vercel.app/',
         }}
       />
 

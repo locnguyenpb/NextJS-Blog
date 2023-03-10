@@ -4,3 +4,8 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}

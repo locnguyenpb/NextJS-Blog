@@ -19,7 +19,14 @@ export function WorkCard({ work }: WorkCardProps) {
         flexShrink={0}
         position='relative'
       >
-        <Image src={work.thumbnailUrl} fill alt='work thumbnail' />
+        <Image
+          src={work.thumbnailUrl}
+          fill
+          alt='work thumbnail'
+          sizes='(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw'
+        />
       </Box>
       <Box>
         <Typography variant='h4' fontWeight='bold'>
