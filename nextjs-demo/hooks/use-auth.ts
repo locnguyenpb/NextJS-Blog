@@ -5,7 +5,7 @@ import useSWR from 'swr';
 
 function getUserInfo(): UserProfile | null {
   try {
-    return JSON.parse(localStorage.getItem(StorageKeys.USER_INFO) || '');
+    return typeof window !== 'undefined' ? JSON.parse(localStorage.getItem(StorageKeys.USER_INFO) || '') : null;
   } catch (error) {
     console.log('Failed to parse user info from local storage', error);
     return null;
