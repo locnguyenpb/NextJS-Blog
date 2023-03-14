@@ -1,3 +1,4 @@
+import { LoginPayload } from '@/models';
 import { authApi } from 'api-client';
 import useSWR from 'swr';
 
@@ -10,11 +11,8 @@ export function useAuth(options?: any) {
 
   const firstLoading = profile === undefined && error === undefined
 
-  async function login() {
-    await authApi.login({
-      username: 'test1',
-      password: '123123',
-    });
+  async function login(payload: LoginPayload) {
+    await authApi.login(payload);
 
     await mutate();
   }

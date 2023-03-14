@@ -1,6 +1,10 @@
+import * as React from 'react';
+import { LoginForm } from '@/components/auth';
+import { LoginPayload } from '@/models';
+import { Paper, Typography } from '@mui/material';
+import { Box } from '@mui/system';
 import { useAuth } from 'hooks';
 import { useRouter } from 'next/router';
-import * as React from 'react';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -8,21 +12,33 @@ export default function LoginPage() {
     revalidateOnMount: false,
   });
 
-  async function handleLoginClick() {
+  async function handleLoginSubmit(payload: LoginPayload) {
     try {
-      await login();
-      console.log('Redirect to dashboard');
-      router.push('/about');
+      await login(payload);
+      router.push('/');
     } catch (error) {
       console.log('failed to login', error);
     }
   }
 
   return (
-    <div>
-      <h1>Login Page</h1>
-      <button onClick={handleLoginClick}>Login</button>
-      <button onClick={() => router.push('/about')}>Go to About</button>
-    </div>
+    <Box>
+      <Paper
+        elevation={4}
+        sx={{
+          mx: 'auto',
+          mt: 8,
+          p: 4,
+          maxWidth: '480px',
+          textAlign: 'center',
+        }}
+      >
+        <Typography component='h1' variant='h5' mb={3}>
+          NextJS - Login
+        </Typography>
+
+        <LoginForm onSubmit={handleLoginSubmit} />
+      </Paper>
+    </Box>
   );
 }
