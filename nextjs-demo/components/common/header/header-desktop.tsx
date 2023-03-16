@@ -14,7 +14,7 @@ export function HeaderDesktop() {
   const routeList = ROUTE_LIST.filter((route) => !route.requireLogin || isLoggedIn);
 
   return (
-    <Box display={{ xs: 'none', md: 'block' }} py={2}>
+    <Box py={2}>
       <Container>
         <Stack direction='row' justifyContent='flex-end'>
           {routeList.map((route) => (
